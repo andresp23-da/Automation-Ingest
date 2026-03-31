@@ -1,0 +1,7 @@
+# grep CRON /var/log/syslog
+58 7 * * * cd /home/apps/etl-python && /home/apps/etl-python/venv/bin/python import_pl.py >> /home/apps/etl-python/cron_pl.log 2>&1
+54 7 * * * cd /home/apps/etl-python && /home/apps/etl-python/venv/bin/python import_pl_hourly.py >> /home/apps/etl-python/cron_pl_hourly.log 2>&1
+50 7 * * * cd /home/apps/etl-python && /home/apps/etl-python/venv/bin/python import_busyhour.py >> /home/apps/etl-python/cron_busyhour.log 2>&1
+02 8 * * * cd /home/apps/etl-python && /home/apps/etl-python/venv/bin/python import_4g.py >> /home/apps/etl-python/cron_4g.log 2>&1
+05 8 * * * cd /home/apps/etl-python && /home/apps/etl-python/venv/bin/python import_2g.py >> /home/apps/etl-python/cron_2g.log 2>&1
+
